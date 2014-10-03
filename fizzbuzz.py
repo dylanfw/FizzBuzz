@@ -1,5 +1,9 @@
-for x in range(1,101):
-    if x % 15 == 0:    print "FizzBuzz"
-    elif x % 3 == 0:   print "Fizz"
-    elif x % 5 == 0:   print "Buzz"
-    else:              print x
+def fizzbuzz(n):
+    s = ""
+    if n % 3 == 0: s += "fizz"
+    if n % 5 == 0: s += "buzz"
+    if s == "": s += str(n)
+    return s
+
+for i in range(1, 101):
+    print(fizzbuzz(i))
